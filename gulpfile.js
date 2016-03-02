@@ -11,7 +11,7 @@ var sh = require('shelljs');
 var shell = require('gulp-shell');
 
 var fs = require('fs');
-
+ 
 
 var paths = {
   sass: ['./scss/**/*.scss']
