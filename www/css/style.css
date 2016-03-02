@@ -1,0 +1,49 @@
+/* Empty. Add your own CSS if you like */
+.container{
+	width: 100%;
+	text-align: center;
+}
+.modal{
+		background: none;
+		margin: auto;
+		
+        /*background: none;
+          width: 100% !important;
+          top:40%;*/
+}
+
+
+
+.modal-dialog .modal-body{
+	font-size: 10px	
+}
+.ng-binding .text-muted{
+	font-size: 10px	
+}
+
+.btn-sm, .btn-group-sm > .btn{
+	font-size: 8px	
+}
+
+
+
+.menuUptoTop{
+	margin-top: -40px
+}
+
+.tabsetoverride ul li{
+	width:25%;
+	
+}
+
+
+/*FRONT CSS*/
+.carousel-inner > .item{
+	padding: 0px;
+	background-color: red;
+}
+
+.carousel-caption{
+	
+}
+

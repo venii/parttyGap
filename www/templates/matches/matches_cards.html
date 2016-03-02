@@ -1,0 +1,16 @@
+<div id="viewport" ng-controller="card-stack-playground" >
+	<div id="cardscontainer" style="width=100%;float:bottom;min-height:330px">
+	<ul class="stack" >
+	    <li
+	        
+	        ng-repeat="card in cards" class="cardnoanimate {{card.animateclass}}"><div style="float:left;"><img onerror="this.src='img/noimg.png'" style="width:180px;height:282px;float:left;" src="{{card.url}}" /><span style="font-size:18px;float:left;margin-top:-180px;width:180px">{{card.name}}</span><div></li>
+	</ul>
+	</div>
+	<div style="width=100%;position:relative;float:bottom">
+		<center>
+		<button  style="width:100px;height:100px;"  class="btn btn-primary-matches-no" ng-click="clickRight()">Dislike</button>
+		<button style="width:100px;height:100px;" class="btn btn-primary-matches-yah"  ng-click="clickLeft()">Like</button>
+		</center>
+	</div>
+</div>
+ 

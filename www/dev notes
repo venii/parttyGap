@@ -1,0 +1,118 @@
+dev notes
+ionic address -> dont use localhost or virtualconex use your network
+ionic serve
+
+
+-> adicionar o openfb no injetores de dependencia do angular
+	-> angular.module('starter', ['ionic', 'starter.controllers','sociogram.controllers','openfb'])
+
+
+	e no run() do app 
+
+	angular.module('starter', ['ionic', 'starter.controllers','sociogram.controllers','openfb'])
+
+	.run(function($ionicPlatform,OpenFB) {
+
+  	OpenFB.init('574073299368611','https://www.facebook.com/connect/login_success.html',window.localStorage)
+
+
+
+  	$rootScope.$on('$stateChangeStart', function(event, toState) {
+            if (toState.name !== "app.login" && toState.name !== "app.logout" && !$window.sessionStorage['fbtoken']) {
+                $state.go('app.login');
+                event.preventDefault();
+            }
+        });
+
+        $rootScope.$on('OAuthException', function() {
+            $state.go('app.login');
+        });
+
+
+
+
+        download -> winphone  sdk
+
+
+
+
+        ->  oauthRedirectURL = (isMob() ? 
+             baseURL + '/www/oauthcallback.html'
+            :
+             baseURL + '/oauthcallback.html'),
+
+        logoutRedirectURL = baseURL + '/logoutcallback.html',
+
+        rever poquer redirect_uri=file://android_assets/www/ouath.html nao finciona no redir do app
+
+
+        usar redirect_uri=/app/#
+
+
+        https://www.facebook.com/dialog/oauth?client_id=574073299368611&redirect_uri=file:///android_asset/www/oauthcallback.html&response_type=token&scope=email
+
+
+        
+
+        https://www.facebook.com/dialog/oauth?client_id=574073299368611&redirect_uri=REDIRECT_URI&response_type=token&scope=email
+
+        use file:/// in ouath apache for redirect into device webview
+
+        usar evento antes de enviar o login e fechar ele depois de receber msn
+
+        document.addEventListener("deviceready", function () {
+     $cordovaOauth.facebook("574073299368611", ["email"]).then(function(result) {
+              // results
+              alert("@");
+               console.log("#1#");
+              console.log(result);
+          }, function(error) {
+              // error
+              alert
+               console.log("#2#");
+                          console.log(error);
+          });
+  });
+
+  add http://localhost/callback to oauth redirect and events
+
+
+
+
+
+
+  ->  document.addEventListener("deviceready", function () {
+             $cordovaOauth.facebook("574073299368611", ["email"]).then(function(result) {
+                        // results
+                         
+                        $scope.tokenfbview = result.access_token;
+                        // alert("@loguei" + result.access_token);
+                       //  $scope.$digest();
+                        //$localStorage.accessToken = result.access_token;
+                        $location.path("/main");
+                        
+                        
+                    }, function(error) {
+                        // error
+                      
+
+                        alert(error);
+                        $state.go('app.loggedout');
+                    });
+          
+            });
+
+
+            ADD localstorage
+
+
+
+
+
+            FLOW
+
+
+
+
+
+            

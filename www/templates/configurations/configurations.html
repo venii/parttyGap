@@ -1,0 +1,36 @@
+<ion-view view-title="Configurações" cache-view="false">
+  <ion-content>
+  			<form novalidate name="configurations" class="simple-form" style="padding-left:40px;font-size:25px">
+  						<input type="hidden" name="lowerage" value="{{lowerage}}" ng-model="lowerager" />
+  						<input type="hidden" name="upperage" value="{{upperage}}" ng-model="upperage" />
+					   <br/>
+					    <br/>
+  			Eu sou :    <!-- Single button -->
+					    <div class="btn-group">
+        <label class="btn btn-primary" ng-model="iam" ng-click="updateRadioGender(1)" btn-radio="'Homen'">Homen</label>
+       
+        <label class="btn btn-primary" ng-model="iam" ng-click="updateRadioGender(2)" btn-radio="'Mulher'">Mulher</label>
+    </div>
+					    <br/>
+					    <br/>
+			Estou procurando por:
+
+					    
+					    <div class="btn-group">
+					        <label class="btn btn-primary" ng-click="updateCheckboxHomen(homen)" ng-model="homen" btn-checkbox >Homen</label>
+					        <label class="btn btn-primary" ng-click="updateCheckboxMulher(mulher)" ng-model="mulher" btn-checkbox >Mulher</label>
+					    </div>
+					    <br/>
+					    <br/>
+			Pesquisar por usuarios do Partty:
+
+					     
+					    <div class="btn-group">
+					        <label class="btn btn-primary" ng-click="updateCheckboxUserRegistrados(parrtyusers)" ng-model="parrtyusers" btn-checkbox>Sim</label>
+					    </div>
+					    <br/>
+					    <br/>
+  						<center><button ng-click="updatepreferences()"  class="btn btn-primary">Atualizar informaçoes</button></center>
+  			</form>
+  </ion-content>
+</ion-view>

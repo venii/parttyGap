@@ -1,0 +1,17 @@
+<ion-view view-title="Profile" cache-view="false">
+  <ion-content>
+
+
+  			<center><h2>{{nome}}</h2></center>
+  			<form novalidate name="profile" class="simple-form" style="padding-left:40px;font-size:25px">
+  					Descrição pessoal:</br>
+  					<input type="text" name="desc" ng-model="mydesc.desc" style="width:80%;padding-left:-40px;border-radius: 10px;" />
+  					</br>
+  					<img id="imgPIC" ng-load="loadImage(this.src)"  width="256" heigh="200" ng-src="{{imgPIC}}" ng-click="changephoto()" onerror="this.src ='img/noimg.png';" style="width:80%;height:200px;border: 1px solid;border-radius:10px" />
+  					</br>
+  					<button style="margin-left:-20px;margin-top:20px;border-radius: 10px;width:100%" ng-click="processForm()">Atualizar</button>
+
+            <input type="file" style="display:none" name="webUploadApproach" ng-model="webUploadApproach" accept="image/*" />
+  			</form>
+  </ion-content>
+</ion-view>

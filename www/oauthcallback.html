@@ -1,0 +1,16 @@
+<html>
+<body onload="callback()">
+<script>
+	
+	//carregamento no onload
+	function callback(){
+		//alert('@');
+		//window.opener.oauthCallback(window.location.href);
+		window.opener.openFB.oauthCallback(window.location.href);
+		 
+		window.close();
+	}
+ 
+</script>
+</body>
+</html>

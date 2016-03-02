@@ -1,0 +1,57 @@
+<ion-view view-title="Macthes" id="matchesView" scroll="false" cache-view="false">
+
+  <ion-content>
+
+  		<tabset class="tabsetoverride" >
+		    <tab   select="info()">
+		    		<tab-heading>
+				        <center><i class="glyphicon glyphicon-info-sign"> </i>   </center>
+				    </tab-heading>
+				    	<div style="width:100%; height:100%">
+				    		<div style="width:100%;height:100px;margin-top:10px;border: 1px solid">
+				    			
+
+				    			<img style="width:100%;height:100%" ng-src="{{eventinfoJSON.cover}}" onerror="this.src ='img/noimg.png';"/>
+				    		</div>
+				    			
+				    			
+				    			<h1>{{eventinfoJSON.name}}</h1>
+
+				    			
+				    			<div style="width:100%;height:100px;margin-top:10px;">
+				    			{{eventinfoJSON.description != null ? eventinfoJSON.description : 'Sem descrição'  }}
+
+				    			</div>
+
+				    	</div>
+				    	
+
+		   			
+		    </tab>
+		    <tab select="matches()" id="matches" >
+		    		<tab-heading>
+				        <center><i class="glyphicon glyphicon-glass"> </i></center>
+				    </tab-heading>
+		   			<div id="includeCards"  style="width:100%; height:100%"></div>
+				  
+		    </tab>
+		    <tab   select="statistics()" disabled="true">
+		    		<tab-heading>
+				        <center><i class="glyphicon glyphicon-search"> </i></center>
+				    </tab-heading>
+		   			stats
+
+		    </tab>
+		     <tab   select="backtoevents()">
+		    		<tab-heading>
+				        <center><i class="glyphicon glyphicon-backward"></i> </center> 
+				    </tab-heading>
+		   			
+
+		    </tab>
+
+		    
+		  </tabset>
+
+  </ion-content>
+</ion-view>

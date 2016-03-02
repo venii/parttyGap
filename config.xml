@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<widget id="com.ionicframework.partty754126" version="0.0.1" android-versionCode="11" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+  
+
+  <name>partty</name>
+  <description>&#xD;&#xD;
+        An Ionic Framework and Cordova project.&#xD;&#xD;
+    </description>
+  <author email="hi@ionicframework" href="http://ionicframework.com/">&#xD;&#xD;
+      Ionic Framework Team&#xD;&#xD;
+    </author>
+  <content src="index.html"/>
+
+  <access origin="*" subdomains="true"/>
+ 
+
+  <allow-navigation href="*"/>
+
+  <allow-intent href="*://*/*"/>
+  <preference name="webviewbounce" value="false"/>
+  <preference name="UIWebViewBounce" value="false"/>
+  <preference name="DisallowOverscroll" value="true"/>
+  <preference name="BackupWebStorage" value="none"/>
+  <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="3000"/>
+  <feature name="StatusBar">
+    <param name="ios-package" value="CDVStatusBar" onload="true"/>
+  </feature>
+
+  <plugin name="com.badrit.base64" spec="0.1.0" source="pgb" />
+  <plugin name="com.phonegap.plugins.pushplugin" spec="2.5.0" source="pgb" />
+  <plugin name="com.synconset.imagepicker" spec="1.0.4" source="pgb" />
+
+  <plugin name="io.litehelpers.cordova.sqlite" spec="0.7.10" source="pgb" />
+  <plugin name="nl.x-services.plugins.calendar" spec="4.2.4" source="pgb" />
+  <plugin name="nl.x-services.plugins.toast" spec="2.0.2" source="pgb" />
+  <plugin name="hu.dpal.phonegap.plugins.uniquedeviceid" spec="1.2.0" source="pgb" />
+  <plugin name="org.apache.cordova.network-information" spec="0.2.12" source="pgb" />
+  <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+  <plugin name="com.indigoway.cordova.whitelist.whitelistplugin" spec="1.1.1" source="pgb" />
+  
+ 
+  <icon src="resources\android\icon\drawable-hdpi-icon.png"/>
+</widget>

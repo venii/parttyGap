@@ -1,0 +1,49 @@
+<ion-view view-title="Eventos" cache-view="false">
+  <ion-content scroll="false">
+
+
+  		<ion-scroll delegate-handle="scroller" on-scroll="checkScroll()" direction="y" style="width: 100%; height: 100%">
+  			<ion-list ng-controller="ControllerListEventsCtrl"
+			          show-delete="shouldShowDelete"
+			          show-reorder="shouldShowReorder"
+			          can-swipe="listCanSwipe">
+								  
+								  <ion-item ng-repeat="item in items"
+								            class="item-thumbnail-left" ng-click="clickGridEvents(item,$index)" style="background: url('{{item.url}}')  no-repeat">
+
+
+								    <div style=" margin-top: 55px;" ng-if="item.type=='label'">
+								    		{{item.label == 'meus_eventos' ? 'Meus Eventos' : 'Eventos Recomendados'  }}
+
+									</div>
+									<div ng-if="item.type=='item'">
+										
+
+										
+										    <img style='display:none' ng-src="{{item.url}}" onerror="this.parentNode.parentNode.style.background = 'url(/img/noimg.png) no-repeat';" onload="this.parentNode.parentNode.style.background = 'url({item.url}) no-repeat'; " />
+
+										    <h2 style="margin-top: 55px;">{{item.name}}</h2>
+										    <h4 style="">{{item.start_time}}</h4>
+										    <p>{{item.description}}</p>
+										   <!-- <ion-option-button class="button-positive"
+										                       ng-click="share(item)">
+										      Share
+										    </ion-option-button>
+										    <ion-option-button class="button-info"
+										                       ng-click="edit(item)">
+										      Edit
+										    </ion-option-button>
+										    <ion-delete-button class="ion-minus-circled"
+										                       ng-click="items.splice($index, 1)">
+										    </ion-delete-button>
+										    <ion-reorder-button class="ion-navicon"
+										                        on-reorder="reorderItem(item, $fromIndex, $toIndex)">
+										    </ion-reorder-button>-->
+									</div>
+
+								  </ion-item>
+
+			</ion-list>
+		</ion-scroll>
+  </ion-content>
+</ion-view>

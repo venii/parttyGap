@@ -1,0 +1,23 @@
+<ion-view view-title="{{chatNameUsr}}">
+  
+
+  	<div id="msnBox" style="width:100%;position: absolute;z-index: 99999;bottom: 0px;" >
+      <input type="text" style="width: 100%;float: left;height:46px" id="sendmessageTxtID" ng-model="msnboxtext"  value="Digite aqui sua mensagem!" />
+
+      <button style="float:right;height:46px;width: 50px;    margin-top: -45px;"  ng-click="sendMessage()">Enviar</button>
+    	
+    </div>
+	
+	<ion-content id="chatView" overflow-scroll="true" delegate-handle="mainScroll" >
+	    
+		    <div id="logmessage"  style="background-color:{{log.side == 1 ? 'red' : 'green'}};float:{{log.side == 1 ? 'left' : 'right'}};border: 1px solid black;border-radius: 10px;min-width:250px;min-height:60px;margin-top:5px;color:white;width:100%" ng-repeat="log in $root.logset" >
+		     		<div ><span style="font-weight:bold;width:50px">{{log.data}} - {{chatNameUsr}} </span></br> {{log.msg}} </div>	
+		    </div>
+		    <div style="width:100%;min-height:200px;float:left"></div>
+		    
+	    
+    </ion-content>
+    
+
+  	
+</ion-view>

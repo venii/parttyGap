@@ -1,0 +1,9 @@
+
+<ion-list >
+        
+        <ion-item id="friend_{{friend.fbId}}" ng-click="loadchat({{friend.fbId}},'{{friend.fName}}','{{friend.pPic}}')" nav-clear menu-close ng-repeat="friend in friendlist" >
+          	<span style="width:64px;height:64px"><img src="{{friend.pPic}}" onerror="this.src ='img/noimg.png';" style='border-radius: 40px / 20px ;' width=64 heigth=64 /></span> {{friend.fName}}<br/>
+          	<span id="friend_lastmsg_{{friend.fbId}}" style="margin-left: 30px;">{{friend.lastmsgloaded}}</span>
+        </ion-item>
+        
+ </ion-list>
